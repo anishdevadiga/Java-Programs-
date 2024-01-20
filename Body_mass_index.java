@@ -1,7 +1,4 @@
-//program to calculate BMI
-//anish
-//230970044
-//09-01-2024
+
 import java.util.Scanner;
 class Body_mass_index
 {
