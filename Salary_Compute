@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Gross
+{
+	public static void main(String args[])
+	{
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the no of hours worked");
+		int hrs=scanner.nextInt();
+		System.out.println("Enter the hourly rate");
+		int rate=scanner.nextInt();
+		double totalpay;
+		if(hrs<=40)
+		{
+			totalpay=hrs*rate;
+			System.out.println("the total pay:"+totalpay);
+		}
+		else
+		{
+			double extrapay=((hrs-40)*1.5)*100;
+			totalpay=(40*rate)+extrapay;
+			System.out.println("the total pay:"+totalpay);
+		}
+
+
+	}
+}
