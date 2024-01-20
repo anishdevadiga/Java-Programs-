@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Loan
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Loan amount:");
+		double loan_Amt=sc.nextDouble();
+		System.out.println("Enter loan period:");
+		int period=sc.nextInt();
+		double int_Rate=5;
+		System.out.println("interest rate\t\t Monthly Payment \t\t Total Payment");
+		do
+		{
+
+			double month_IntRate=int_Rate/(12*100);
+			double month_Pay=(loan_Amt*month_IntRate)/(1-(1/(Math.pow(1+month_IntRate,period*12))));
+			double total_Pay=month_Pay*period*12;
+			System.out.println(int_Rate+"%"+"\t\t\t"+month_Pay+"\t\t"+total_Pay);
+			int_Rate+=0.125;
+		}while(int_Rate<=8);
+	}
+}
