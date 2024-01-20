@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Speedkm {
+    public static void main(String args[])
+    {
+            Scanner scanner= new Scanner(System.in);
+           int num;
+            
+            do{
+                System.out.println("1.kmph to mps\n2.mps to kmph");
+                System.out.println("Enter your choice");
+                int ch=scanner.nextInt();
+                switch (ch) {
+                    case 1:System.out.println("Kmph to mps");
+                            System.out.println("Enter the speed in kmph");
+                            double kmph=scanner.nextDouble();
+                            double mps=kmph*(1000.0 / 3600.0);
+                            System.out.println("Speed in mps="+mps);
+                        break;
+                    case 2:System.out.println("mps to kmph");
+                            System.out.println("Enter the speed in mps");
+                            double mps_x=scanner.nextDouble();
+                            double kmph_x=mps_x*(3600.0 / 1000.0);
+                            System.out.println("Speed in kmph="+kmph_x);
+                            break;
+                    default:System.out.println("Invalid choice");
+                        break;
+                }
+                System.out.println("do you want to continue(press 0 to stop)");
+                num=scanner.nextInt();
+
+            }while(num!=0);
+            scanner.close();
+    }
+    
+}
